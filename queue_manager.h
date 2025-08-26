@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include <stdexcept>
 
 using namespace std;
 
@@ -14,7 +15,7 @@ struct Show {
 };
 
 // exception for shows not found
-class ShowNotFoundException : public exception {
+class ShowNotFoundException : public std::exception {
     virtual const char* what() const throw() {
         return "Show not found in the queue.";
     }
