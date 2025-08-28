@@ -21,8 +21,9 @@ int main() {
         cout << "5. Search Show\n";
         cout << "6. Save Queue\n";
         cout << "7. Load Queue\n";
+        cout << "8. Exit\n";
 
-        cout << "Choose an option (1-7)";
+        cout << "Choose an option (1-8): ";
         getline(cin, choice);
 
         switch (choice[0]) {
@@ -47,6 +48,9 @@ int main() {
             case '7':
                 loadQueue(queue, filename);
                 break;
+            case '8':
+                cout << "Goodbye!";
+                return 0;
             default:
                 cout << "Invalid option. Please try again.\n";
         

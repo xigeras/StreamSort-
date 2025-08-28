@@ -51,15 +51,15 @@ void removeShow(vector<Show> &queue) {
     }
 }
 
-void displayQueueRecursive(const vector<Show>& queue, size_t index) {
+void displayRecursiveQueue(const vector<Show>& queue, size_t index) {
     if (index >= queue.size()) return;
     const Show& s = queue[index];
     cout << index + 1 << ". " << s.title << " | " << s.genre << " | " << s.episodes << " | " << s.rating << endl;
-    displayQueueRecursive(queue, index + 1);
+    displayRecursiveQueue(queue, index + 1);
 }
 
 void sortQueue(vector<Show>& queue) {
-    cout << "Sort by (1) Title or (2) Rating? ";
+    cout << "Sort by (1) Title or (2) Rating?: ";
     string choice;
     getline(cin, choice);
     if (choice == "1") {
